@@ -35,14 +35,14 @@ var metadata = viper.New()
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "rofi-web",
-	Short: "List links and open them in the browser using Rofi",
-	Long: `Rofi Web displays lists of links in a consistent way
-using Rofi as a frontend. Lists are defined using a simple, standardized
-format.
+	Use:   "lofi-rofi",
+	Short: "A collection of Rofi scripts",
+	Long: `Lofi Rofi is a collection of - somewhat unreliable aka Lofi -
+Rofi utilities that solve every workspace interactivity problems.
+Or something like that anyways.
 
-Provide the list key as a flag to get started.
-e.g. rofi-web -l repositories`,
+Provide the utility name to get started.
+e.g. lofi-rofi web`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -67,7 +67,7 @@ func initConfig() {
 		// TODO: What about metadata
 	} else {
 		userConfigDir, err := os.UserConfigDir()
-		configDir := userConfigDir + "/rofi-web"
+		configDir := userConfigDir + "/lofi-rofi"
 
 		createConfigIfNotExists(configDir, "config")
 		createConfigIfNotExists(configDir, "metadata")

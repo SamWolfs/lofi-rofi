@@ -1,22 +1,20 @@
-#+title: Rofi Web
+#+title: Lofi Rofi
 
 ** Usage
-Download the [[https://github.com/SamWolfs/rofi-web/releases/latest][Latest release]] and unzip the executable to a location on your ~$PATH~.
+Download the [[https://github.com/SamWolfs/lofi-rofi/releases/latest][Latest release]] and unzip the executable to a location on your ~$PATH~.
 
 Run the executable as a custom mode in ~rofi~
 #+begin_src shell
-rofi -modi "Repositories:rofi-web repositories" -show Repositories
+rofi -modi "Repositories:lofi-rofi web -l repositories" -show Repositories
 #+end_src
 
 Or combined
 #+begin_src shell
-rofi -modi "Repositories:rofi-web repositories#Workflows:rofi-web workflows" -show Repositories
+rofi -modi "Repositories:lofi-rofi web -l repositories#Workflows:lofi-rofi web -l workflows" -show Repositories
 #+end_src
 
 *Use the (#) as separator instead of a comma to avoid errors in your i3 config*
 
 ** Configuration
 
-Run ~rofi-web init~ to generate a configuration based on the current ~gh~ user.
-
-The configuration is stored under ~rofi-web/metadata~ in the [[https://pkg.go.dev/os#UserConfigDir][User Configuration Directory]].
+The configuration is stored under ~lofi-rofi/metadata~ in the [[https://pkg.go.dev/os#UserConfigDir][User Configuration Directory]].

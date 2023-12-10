@@ -45,14 +45,14 @@ var list string
 var links []Link
 
 func init() {
-	showCommand.Flags().StringVarP(&list, "list", "l", "", "Name of list (required)")
-	showCommand.MarkFlagRequired("list")
+	webCommand.Flags().StringVarP(&list, "list", "l", "", "Name of list (required)")
+	webCommand.MarkFlagRequired("list")
 
-	rootCmd.AddCommand(showCommand)
+	rootCmd.AddCommand(webCommand)
 }
 
-var showCommand = &cobra.Command{
-	Use: "show",
+var webCommand = &cobra.Command{
+	Use: "web",
 	// TODO: descriptions
 	Short: "List all links defined under the provided key and open selection.",
 	Long: `List all links defined under the provided key and open selection.`,

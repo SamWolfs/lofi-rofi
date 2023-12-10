@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/SamWolfs/rofi-web/cmd"
+import "github.com/SamWolfs/lofi-rofi/cmd"
 
 func main() {
 	cmd.Execute()

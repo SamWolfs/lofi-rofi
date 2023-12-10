@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"github.com/cli/go-gh"
-	"github.com/SamWolfs/rofi-web/cmd"
+	"github.com/SamWolfs/lofi-rofi/cmd"
 	"github.com/thoas/go-funk"
 	"gopkg.in/yaml.v2"
 )

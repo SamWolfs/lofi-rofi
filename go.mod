@@ -1,4 +1,4 @@
-module github.com/SamWolfs/rofi-web
+module github.com/SamWolfs/lofi-rofi
 
 go 1.21
 
