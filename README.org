@@ -18,3 +18,23 @@ rofi -modi "Repositories:lofi-rofi web -l repositories#Workflows:lofi-rofi web -
 ** Configuration
 
 The configuration is stored under ~lofi-rofi/metadata~ in the [[https://pkg.go.dev/os#UserConfigDir][User Configuration Directory]].
+
+*** Format
+
+#+begin_src yaml
+collection:
+  - name: Link Name
+    tags: Link Tags
+    url: Link Url
+#+end_src
+
+** Scripts
+
+*** Repositories
+
+#+begin_src bash :results raw
+gh repo list --limit 50 --no-archived --json 'name,nameWithOwner,url,isFork' --jq '[.[] | select(.isFork|not)]' | \
+    jq 'map(.tags = .nameWithOwner | del(.isFork, .nameWithOwner)) | sort_by(.name)' | \
+    yq -P
+#+end_src
+
